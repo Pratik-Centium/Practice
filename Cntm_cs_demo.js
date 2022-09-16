@@ -3,7 +3,7 @@
  * @NScriptType ClientScript
  * @NModuleScope SameAccount
  */
- define(['N/ui/dialog'],
+ define(['N/record'],
 
     function() {
         
@@ -19,9 +19,20 @@
         function pageInit(scriptContext) {
           
             alert('page init sucessfully');
+            // var rec=scriptContext.currentRecord;
+            // rec.setValue({
+            //     fieldId: 'memo',
+            //     value: 'name - pratik company-centium consulting' ,
+                
+            // });
 
-          
+           
+            
+
         }
+//set value in perticular feild
+
+
      
         /**
          * Function to be executed when field is changed.
@@ -36,17 +47,24 @@
          * @since 2015.2
          */
         function fieldChanged(scriptContext) {
-            var rec=scriptContext.currentRecord
-            //var id=scriptContext.fieldId;
-           var id=rec.fieldId();
-            console.log(id);
+                        // var id=scriptContext.fieldId;
+//
+                        // var rec = scriptContext.currentRecord;
+
+                        // var value=rec.getValue({
+                        //     fieldId: 'startdate',
+                            
+                        //     ignoreFieldChange: true
+                        // });
+
+                        // console.log('after feild change'+value);
+                       alert('feild change');
 
 
-            if(id=='memo')
-            {
-                rec.s
-            }
-            alert('feild changed');
+
+// Add additional code. 
+
+        
 
          }
     
@@ -109,7 +127,7 @@
          */
         function validateField(scriptContext) {
  
-           return true;
+           
         }
     
         /**
